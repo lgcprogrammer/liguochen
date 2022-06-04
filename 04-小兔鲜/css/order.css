@@ -1,0 +1,210 @@
+body{
+    background-color: #f7f7f8;
+}
+/* 主体 */
+.main{
+    /* 80px:为了内容不被底部盖住 */
+    padding: 12px 11px 80px;
+}
+.pannel{
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+/* 用户信息 */
+.user-msg{
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 11px;
+}
+.user-msg .location{
+    width: 30px;
+	height: 30px;
+    margin-right: 10px;
+	background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+.user-msg .user{
+    flex: 1;
+}
+.user-msg .user .top{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.user-msg .user .top h5{
+    display: inline-block;
+    width: 53px;
+    font-size: 15px;
+	font-weight: normal;
+    color: #262626;
+}
+.user-msg .user .top p{
+    font-size: 13px;
+}
+.user-msg .user .bottom{
+    margin-top: 5px;
+    font-size: 12px;
+}
+.user-msg .more{
+    width: 44px;
+    height: 44px;
+    /* background-color: pink; */
+    text-align: center;
+    line-height: 44px;
+    color: #808080;;
+}
+/* 商品 */
+.shop{
+    display: flex;
+    align-items: center;
+    padding: 11px 0 11px 11px;
+}
+.shop .left{
+    margin-right: 12px;
+    width: 85px;
+    height: 85px;
+}
+.shop .middle{
+    flex: 1;
+}
+.shop .middle .top{
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #262626;
+}
+.shop .middle .top2{
+    margin-bottom: 5px;
+    width: 95px;
+	height: 16px;
+	background-color: #f7f7f8;
+	border-radius: 2px;
+    font-size: 1px;
+    color:  #888888;
+}
+.shop .middle .bottom .xianjia{
+    margin-right: 5px;
+    font-size: 9px;
+	font-weight: 700;
+    color: #cf4444;
+}
+.shop .middle .bottom .xianjia i{
+    font-size: 16px;
+    font-weight: 400;
+}
+.shop .middle .bottom .yuanjia{
+    /* 添加下划线 */
+    text-decoration: line-through;
+    font-size: 9px;
+    font-weight: 700;
+    color: #999999;
+}
+.shop .middle .bottom .yuanjia i{
+
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.shop .right{
+    width: 44px;
+    height: 44px;
+    /* background-color: pink; */
+    text-align: center;
+    line-height: 44px;
+}
+/* 其他信息 */
+.main .other,
+.money div{
+    padding: 15px 16px;
+}
+.main .other div,
+.money div{
+    display: flex;
+    /* align-items: center; */
+}
+/* 选择第一个和最后一个设置主轴对齐方式 */
+.main .other div:first-child,
+.main .other div:last-child{
+    justify-content: space-between;
+}
+/* 找到第二个添加上下间距 */
+.main .other div:nth-child(2){
+    margin: 29px 0;
+}
+
+.main .other div h5,
+.money div h5{
+    font-size: 13px;
+	font-weight: normal;
+	color: #262626;
+}
+.main .other div .beizhu{
+    margin-left: 19px;
+    font-size: 12px;
+	color: #989898;
+}
+.main .other div p,
+.money div p{
+    font-size: 13px;
+	color: #262626;
+}
+.main .other div p .iconfont{
+    margin-left: 9px;
+    font-size: 11px;
+    color: #808080;
+}
+
+.money div{
+    justify-content: space-between;
+}
+.money div i{
+    font-size: 13px;
+	color: #cf4444;
+}
+
+/* 底部支付 */
+.pay{
+    display: flex;
+    /* 主轴对齐方式 */
+    justify-content: space-between;
+    /* 侧轴对齐方式 */
+    align-items: center;
+
+    padding:0 11px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    border-top: 1px solid #ededed;
+	height: 79px;
+    width: 100%;
+    background-color: #fff;
+}
+.pay .left{
+   
+    font-size: 11px;
+    color: #1e1e1e;
+}
+.pay .left span{
+    margin-left: 12px;
+    font-size: 11px;
+    color: #cf4444;
+}
+.pay .left span i{
+    font-size: 18px;
+}
+.pay .right input{
+    width: 91px;
+    height: 35px;
+    background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+	border-radius: 3px;
+    font-size: 13px;
+    color: #fff;
+}
