@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        textarea {
+            position: relative;
+            width: 400px;
+            height: 200px;
+
+            margin: 100px;
+            border: none;
+            /* 轮廓线不显示 */
+            outline: none;
+            /* 进制拉伸 */
+            resize: none;
+            border: 1px solid #000;
+
+        }
+
+        button {
+            position: absolute;
+            left: 510px;
+            top: 280px;
+            width: 50px;
+            height: 50px;
+        }
+
+        li {
+            margin-top: 10px;
+            list-style: none;
+            transform: translate(100px);
+            border-bottom: 1px solid #000;
+            width: 400px;
+            height: 40px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea placeholder="输入留言"></textarea>
+    <button>发布</button>
+    <ul>
+        <!-- <li></li> -->
+    </ul>
+    <script>
+        // 新留言显示到后面appendChile  前面用insertBefor
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        //输入框
+        if (text.placeholder == '输入留言') {
+            text.onfocus = function () {
+                text.placeholder = '';
+            }
+        }
+        text.onblur = function () {
+            text.placeholder = '输入留言';
+        }
+        btn.onclick = function () {
+            if (text.value == '') {
+                alert('请输入内容,内容不能为空');
+                return false;
+            }
+            else {
+                // (1)创建元素
+                var li = document.createElement('li');
+                // 添加元素  insertBefor
+                li.innerHTML = text.value;
+                ul.insertBefore(li, ul.children[0])
+            }
+            text.value = '';
+
+        }
+    </script>
+</body>
+
+</html>
