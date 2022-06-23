@@ -1,0 +1,120 @@
+@import "./base.less";
+@import "./normalize.less";
+
+@colora:#D78B09;
+// 变量存储37.5
+@rem:37.5rem;
+body{
+    background-color: #f0f0f0;
+}
+// 主题内容
+.main{
+    padding-bottom: (50/37.5rem);
+    .banner{
+        height: (160 /@rem);
+    }
+    .title{
+        height: (40 / @rem);
+        padding-left: 15px;
+        font-size: (14 / @rem);
+        font-weight: 700;
+        line-height: (40 / @rem);
+        color: #3c3c3c;
+    }
+    .item{
+        margin-bottom: (10/@rem);
+        .pic{
+            position: relative;
+            height: (160 /@rem);
+            .action{
+                position: absolute;
+                left: (-2 /@rem);
+                top: (-5/@rem);
+                width: (68 / @rem);
+                height: (29 /@rem);
+                background-image: url(../images/status_active.png);
+                // 图片等比例缩放
+                background-size: contain;
+                text-align: center;
+                line-height: (25 /@rem);
+                font-size: (14 /@rem);
+                color: #fff;
+                &.off{
+                    background-image: url(../images/status_default.png);
+                }
+
+            }
+            .iconfont{
+                position: absolute;
+                right: 0;
+                top: (10 / @rem);
+                width: (24/@rem);
+                height: (24/@rem);
+                color: #FFFFFF;
+            }
+        }
+        // 文字区域
+        .txt{
+            background-color: #fff;
+            padding: (10/@rem) (15/@rem);
+            .top{
+                display: flex;
+                justify-content: space-between;
+                h4{
+                    font-size: (15/@rem);
+                    color: #3c3c3c;
+                    font-weight: 400;
+                    width: (290/@rem);
+                }
+                p{
+                    font-size: (15/@rem);
+                    color: #FE6249;
+                }
+            }
+            .bottom{
+                display: flex;
+                margin-top: (15/@rem);
+                p{
+                    margin-right: (15/@rem);
+                    font-size: (11/@rem);
+                    color: #B4B4B4 ;
+                    .iconfont{
+                        width: (8/@rem);
+                        height: (10/@rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 底部工具栏
+footer{
+    display: flex;
+    // 中间的距离是两边距离的2倍
+    justify-content: space-around;
+    // 设置垂直方向居中
+    align-items: center;
+    // 固定定位
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    // 和父级相同的宽度
+    width: 100%;
+    height: (50 / 37.5rem);
+    background-color: #FECA49;
+    text-align: center;
+    a{
+        color: @colora;
+        .iconfont{
+            font-size: (22 / 37.5rem);
+        }
+        div{
+            font-size: (11 / 37.5rem);
+        }
+        &.current{
+            color: #fff;
+        }
+
+    }
+}
